@@ -1,0 +1,534 @@
+:root {
+  --navy:#0b0b0d;
+  --blue:#c8102e;
+  --gold:#f04452;
+  --cream:#f7f5f3;
+  --ink:#151515
+}
+/* Denver red & black edition */
+.header {
+  background: #0b0b0d;
+  color: white;
+  border-bottom: 1px solid #343438;
+}
+.header .brand, .header .nav a { color: white; }
+.header .brand span { color: var(--blue); }
+.header .nav a:hover { color: var(--gold); }
+.menu-button { color: white; }
+.match-banner {
+  min-height: 52px;
+  padding: 10px clamp(24px, 6vw, 88px);
+  background: var(--blue);
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: clamp(18px, 4vw, 60px);
+  font: 700 13px 'Barlow Condensed', sans-serif;
+  letter-spacing: .8px;
+  text-decoration: none;
+}
+.match-banner-label { color: #fff; opacity: .72; letter-spacing: 1.7px; }
+.match-banner b { font-size: 16px; }
+.match-banner i { font: 400 12px 'Noto Sans JP', sans-serif; }
+.match-banner-place { margin-left: auto; font-size: 11px; opacity: .86; }
+.match-banner strong { font-size: 22px; }
+* {
+  box-sizing:border-box
+}
+html {
+  scroll-behavior:smooth
+}
+body {
+  margin:0;
+  background:var(--cream);
+  color:var(--ink);
+  font-family:'Noto Sans JP',sans-serif
+}
+.header {
+  height:74px;
+  padding:0 clamp(24px,6vw,88px);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  background:#000;
+  position:sticky;
+  top:0;
+  z-index:5
+}
+.brand {
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:28px;
+  font-weight:800;
+  letter-spacing:1px;
+  color:var(--navy);
+  text-decoration:none
+}
+.brand span {
+  color:var(--gold)
+}
+.nav {
+  display:flex;
+  gap:32px
+}
+.nav a {
+  color:var(--ink);
+  font-size:12px;
+  font-weight:bold;
+  letter-spacing:1.2px;
+  text-decoration:none
+}
+.nav a:hover {
+  color:var(--blue)
+}
+.menu-button {
+  display:none;
+  border:0;
+  background:transparent;
+  font:bold 13px 'Barlow Condensed';
+  letter-spacing:1px
+}
+.hero {
+  min-height:660px;
+  padding:clamp(64px,10vw,142px) clamp(24px,11vw,170px);
+  background:var(--navy);
+  color:white;
+  overflow:hidden;
+  position:relative
+}
+.hero {
+  min-height: 700px;
+  background-color: #09090b;
+  background-image: url('../img/IMG_3651.JPG');
+  background-position: center 45%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* .hero::after {
+  content: '';
+  position: absolute;
+  width: min(45vw, 620px); height: min(45vw, 620px);
+  right: 8%; top: 8%; border: 1px solid rgba(255,255,255,.25);
+  border-radius: 50%; box-shadow: 0 0 0 18px rgba(200,16,46,.18), 0 0 0 55px rgba(200,16,46,.08);
+} */
+.hero-copy {
+  position:relative;
+  z-index:1
+}
+.eyebrow,.section-label {
+  font:700 13px 'Barlow Condensed';
+  letter-spacing:2px;
+  color:var(--gold);
+  margin:0 0 20px
+}
+.hero h1,.section h2,.contact h2 {
+  font:800 clamp(74px,11vw,160px)/.78 'Barlow Condensed';
+  letter-spacing:-2px;
+  margin:0
+}
+.hero h1 em {
+  font-style:normal;
+  color:var(--gold)
+}
+.hero-text {
+  margin:32px 0 34px;
+  line-height:2;
+  font-size:14px
+}
+.button {
+  display:inline-flex;
+  align-items:center;
+  gap:28px;
+  background:var(--gold);
+  color:var(--navy);
+  padding:16px 21px;
+  border:0;
+  text-decoration:none;
+  font-weight:900;
+  font-size:12px;
+  letter-spacing:.8px;
+  cursor:pointer
+}
+.button span {
+  font-size:20px
+}
+.hero-mark {
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  color:rgba(255,255,255,.12);
+  font:800 clamp(170px,28vw,420px)/.7 'Barlow Condensed';
+  letter-spacing:-25px;
+  z-index:0;
+  white-space:nowrap
+}
+.hero-side { position: absolute; right: 32px; bottom: 115px; z-index: 1; writing-mode: vertical-rl; font: 700 11px 'Barlow Condensed', sans-serif; letter-spacing: 2px; color: rgba(255,255,255,.62); }
+.hero-mark b {
+  color: inherit;
+}
+.hero-number {
+  position:absolute;
+  right:7%;
+  bottom:40px;
+  color:var(--gold);
+  font:700 16px 'Barlow Condensed';
+  letter-spacing:2px
+}
+.section {
+  padding:100px clamp(24px,11vw,170px)
+}
+.section-heading {
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  border-bottom:1px solid #c8c8c1;
+  padding-bottom:35px
+}
+.section h2,.contact h2 {
+  font-size:clamp(60px,8vw,116px)
+}
+.section h2 span,.contact h2 span {
+  color:var(--blue)
+}
+.section-heading>p {
+  font-size:14px;
+  line-height:2;
+  margin:0 0 7px
+}
+.about-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12%;
+  margin-top:54px;
+  line-height:2;
+  font-size:15px
+}
+.about-grid>p {
+  margin:0
+}
+.about dl {
+  margin:0
+}
+.about dl div {
+  border-top:1px solid #c8c8c1;
+  padding:13px 0;
+  display:flex;
+  justify-content:space-between
+}
+.about dt {
+  font:700 13px 'Barlow Condensed';
+  letter-spacing:1px;
+  color:var(--blue)
+}
+.about dd {
+  margin:0;
+  font-size:13px
+}
+.members {
+  background:#e9e7df
+}
+.members { background: #121214; color: white; }
+.members .section-heading, .members .roster, .members .roster article { border-color: #3c3c40; }
+.members .section h2 span, .members h2 span { color: var(--gold); }
+.members .roster article div p, .members .roster-note { color: #aaa; }
+.roster {
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  margin-top:48px;
+  border-top:1px solid #bfc0bc
+}
+.roster article {
+  display:flex;
+  gap:22px;
+  padding:22px 18px 22px 0;
+  border-bottom:1px solid #bfc0bc
+}
+.roster article:nth-child(odd) {
+  margin-right:24px
+}
+.roster .captain-card {
+  align-items:center;
+  gap:18px;
+  padding:22px 18px 22px 0;
+}
+.captain-card img {
+  width:116px;
+  height:116px;
+  flex:0 0 116px;
+  object-fit:cover;
+  object-position:center 28%;
+  border:2px solid var(--blue);
+  display:block;
+}
+.captain-card .member-info { min-width:0; }
+.captain-card .number { font-size:50px; margin:0 0 2px; }
+.member-role {
+  margin:0 0 5px;
+  color:var(--gold);
+  font:700 13px 'Barlow Condensed',sans-serif;
+  letter-spacing:1.2px;
+}
+.captain-card h3 { color:white; font:700 24px 'Noto Sans JP',sans-serif; margin:0 0 7px; }
+.roster .member-card {
+  align-items:center;
+  gap:18px;
+  padding:22px 18px 22px 0;
+}
+.member-card img {
+  width:116px;
+  height:116px;
+  flex:0 0 116px;
+  object-fit:cover;
+  object-position:center 30%;
+  border:2px solid var(--blue);
+  display:block;
+}
+.watanabe-card img { object-position:52% 43%; }
+.member-card .member-info { min-width:0; }
+.member-card .number { font-size:50px; margin:0 0 2px; }
+.member-card h3 { color:white; font:700 24px 'Noto Sans JP',sans-serif; margin:0 0 7px; }
+.number {
+  color:var(--gold);
+  font:800 62px/.8 'Barlow Condensed';
+  margin:0
+}
+.roster h3 {
+  font:700 19px 'Barlow Condensed';
+  letter-spacing:1px;
+  margin:0 0 7px
+}
+.roster article div p,.roster-note {
+  margin:0;
+  font-size:12px;
+  color:#59616b
+}
+.roster-note {
+  margin-top:16px
+}
+.schedule {
+  background:var(--blue);
+  color:#fff
+}
+.schedule { background: #c8102e; }
+.schedule .section-heading { border-color: rgba(255,255,255,.35); }
+.schedule .game { border-color: rgba(255,255,255,.35); }
+.schedule .game.featured { background: #0b0b0d; color: white; border-left: 6px solid var(--gold); }
+.schedule .featured .game-type, .schedule .game>a { color: var(--gold); }
+.schedule .section-heading {
+  border-color:#6091bd
+}
+.schedule .section-heading h2 span {
+  color:var(--gold)
+}
+.games {
+  margin-top:44px
+}
+.game {
+  display:flex;
+  align-items:center;
+  gap:28px;
+  padding:20px;
+  border-bottom:1px solid #6091bd
+}
+.game.featured {
+  background:var(--cream);
+  color:var(--ink);
+  border:0
+}
+.game time {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  width:58px;
+  font-family:'Barlow Condensed';
+  line-height:.9
+}
+.game time span {
+  font-size:14px;
+  letter-spacing:1px
+}
+.game time b {
+  font-size:46px
+}
+.game time small {
+  font-size:13px;
+  letter-spacing:1px
+}
+.game-type {
+  color:var(--gold);
+  font:700 12px 'Barlow Condensed';
+  letter-spacing:1.5px;
+  margin:0 0 5px
+}
+.featured .game-type {
+  color:var(--blue)
+}
+.game h3 {
+  font:700 26px 'Barlow Condensed';
+  margin:0;
+  letter-spacing:.5px
+}
+.game h3 .team-name { font:700 26px 'Noto Sans JP',sans-serif; }
+.game h3 i {
+  font:400 16px 'Noto Sans JP';
+  padding:0 5px
+}
+.game div>p:last-child {
+  font-size:12px;
+  margin:5px 0 0
+}
+.game>a {
+  margin-left:auto;
+  color:var(--blue);
+  font-size:28px;
+  text-decoration:none
+}
+.contact {
+  padding:100px clamp(24px,11vw,170px);
+  background:var(--navy);
+  color:white;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10%
+}
+.contact h2 span {
+  color:var(--gold)
+}
+.contact>div>p:last-child {
+  font-size:14px;
+  line-height:2;
+  margin-top:33px;
+  max-width:400px
+}
+.contact form {
+  display:grid;
+  gap:17px
+}
+.contact label {
+  font-size:12px;
+  font-weight:bold;
+  display:grid;
+  gap:7px
+}
+input,textarea {
+  border:0;
+  border-bottom:1px solid #617088;
+  background:transparent;
+  padding:10px 0;
+  color:white;
+  font:14px 'Noto Sans JP';
+  outline:0
+}
+textarea {
+  height:78px;
+  resize:vertical
+}
+input:focus,textarea:focus {
+  border-color:var(--gold)
+}
+.form-status {
+  font-size:12px;
+  color:var(--gold);
+  min-height:18px;
+  margin:0
+}
+footer {
+  background:var(--navy);
+  border-top:1px solid #263953;
+  color:#aab4c1;
+  padding:25px clamp(24px,6vw,88px);
+  display:flex;
+  justify-content:space-between;
+  align-items:center
+}
+footer .brand {
+  color:white
+}
+footer p {
+  font:11px 'Barlow Condensed';
+  letter-spacing:1px;
+  margin:0
+}
+@media(max-width:700px) {
+  .match-banner { min-height: 62px; gap: 10px; flex-wrap: wrap; }
+  .match-banner-place { display: none; }
+  .match-banner strong { margin-left: auto; }
+  .header {
+    height:60px
+  }
+  .menu-button {
+    display:block
+  }
+  .nav {
+    position:absolute;
+    display:none;
+    top:60px;
+    left:0;
+    right:0;
+    padding:20px 24px;
+    background:var(--cream);
+    flex-direction:column;
+    gap:18px
+  }
+  .nav { background: #0b0b0d; }
+  .nav.open {
+    display:flex
+  }
+  .hero {
+    min-height:580px;
+    padding-top:110px
+  }
+  .hero { background-position: center, center, 58% center; }
+  .hero-mark {
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    font-size:220px
+  }
+  .section,.contact {
+    padding:70px 24px
+  }
+  .section-heading {
+    display:block
+  }
+  .section-heading>p {
+    margin-top:25px
+  }
+  .about-grid,.contact {
+    grid-template-columns:1fr;
+    gap:42px
+  }
+  .roster {
+    grid-template-columns:1fr
+  }
+  .roster article:nth-child(odd) {
+    margin-right:0
+  }
+  .captain-card img { width:96px; height:96px; flex-basis:96px; }
+  .member-card img { width:96px; height:96px; flex-basis:96px; }
+  .game {
+    gap:15px;
+    padding:17px 0
+  }
+  .game.featured {
+    padding:17px
+  }
+  .game h3 {
+    font-size:21px
+  }
+  .game h3 .team-name { font-size:21px; }
+  .game div>p:last-child {
+    font-size:10px
+  }
+  .game time {
+    width:44px
+  }
+  .game time b {
+    font-size:38px
+  }
+  footer {
+    flex-direction:column;
+    gap:12px;
+    align-items:flex-start
+  }
+}
