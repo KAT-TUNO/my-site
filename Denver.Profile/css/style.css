@@ -475,10 +475,6 @@ footer p {
     display:flex
   }
   .hero {
-    min-height:580px;
-    padding-top:110px
-  }
-  .hero {
     min-height: 500px;
     padding-top: 110px;
     background-position: 50% 15%;
