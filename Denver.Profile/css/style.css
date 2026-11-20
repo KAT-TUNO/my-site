@@ -478,13 +478,14 @@ footer p {
     min-height:580px;
     padding-top:110px
   }
-  .hero { background-position: center, center, 58% center; }
-  .hero-mark {
-    left:50%;
-    top:50%;
-    transform:translate(-50%,-50%);
-    font-size:220px
+  .hero {
+    min-height: 500px;
+    padding-top: 110px;
+    background-position: 50% 15%;
+    background-size: cover;
   }
+  .hero-mark {
+    font-size: 140px;
   .section,.contact {
     padding:70px 24px
   }
